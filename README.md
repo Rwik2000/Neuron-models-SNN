@@ -1,7 +1,7 @@
 # Leaky Integrate and Fire - SNN
 
 
-This is a simple implementation of Leaky integrate and fire model (LIF) neuron. Given an input current value the neuron gives the corresponding spikes. 
+This is a simple implementation of Leaky integrate and fire model (LIF) neuron. Given an input current value the neuron gives the corresponding spikes. The data obtained can be used in various Spiking Neural Networks (SNN) architectures.
 
 All parameters of the neuron can be changed in the [configs.py](https://github.com/Rwik2000/LIF-SNN/blob/master/configs.py). Note that the units of time is **milliseconds**.
 
@@ -43,6 +43,10 @@ v = runLIF(neuron, t_span, dt, I)
 
 ## Test Case:
 ![alt text](https://github.com/Rwik2000/LIF-SNN/blob/master/testCase_1.png)
+
+## Some links:
+* [MIT open courseware](https://ocw.mit.edu/resources/res-9-003-brains-minds-and-machines-summer-course-summer-2015/tutorials/tutorial-2.-matlab-programming/MITRES_9_003SUM15_fire.pdf)
+* https://neuronaldynamics.epfl.ch/index.html
 
 ## To-Do:
 - [ ] Add random salt-pepper noise to the output voltage.
