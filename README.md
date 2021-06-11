@@ -3,10 +3,10 @@
 
 This is a simple implementation of Leaky integrate and fire model (LIF) neuron. Given an input current value the neuron gives the corresponding spikes. 
 
-All parameters of the neuron can be changed in the [configs.py](www.google.com). Note that the units of time is **milliseconds**.
+All parameters of the neuron can be changed in the [configs.py](https://github.com/Rwik2000/LIF-SNN/blob/master/configs.py). Note that the units of time is **milliseconds**.
 
 ## Usage:
-From [neuron.py](www.google.com), call the function `runLIF()`. 
+From [neuron.py](https://github.com/Rwik2000/LIF-SNN/blob/master/neuron.py), call the function `runLIF()`. 
 ```python
 def runLIF(model, t_span, dt, I):
     v = np.zeros_like(t_span)
@@ -28,7 +28,7 @@ def runLIF(model, t_span, dt, I):
 ```
 Here, `t_span` is the the overall time duration, `dt` being the small time steps and `I` being the current function w.r.t time.
 
-To get an idea just run the [neuron.py](www.google.com), and see the default example given at the end:
+To get an idea just run the [neuron.py](https://github.com/Rwik2000/LIF-SNN/blob/master/neuron.py), and see the default example given at the end:
 ```python
 t_tot = 500
 dt = 0.01
@@ -39,12 +39,12 @@ neuron = LIF() #defining the neuron model
 v = runLIF(neuron, t_span, dt, I)
 ```
 
-**NOTE**: To plot the voltage and current data, turn ON the `isPLot` argument in the [configs.py](www.google.com)
+**NOTE**: To plot the voltage and current data, turn ON the `isPLot` argument in the [configs.py](https://github.com/Rwik2000/LIF-SNN/blob/master/configs.py)
 
 ## Test Case:
-![alt text](http://url/to/img.png)
+![alt text](https://github.com/Rwik2000/LIF-SNN/blob/master/testCase_1.png)
 
 ## To-Do:
-Add random salt-pepper noise to the output voltage.
+- [ ] Add random salt-pepper noise to the output voltage.
 
 
