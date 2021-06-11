@@ -5,7 +5,7 @@ This is a simple implementation of Leaky integrate and fire model (LIF) neuron. 
 
 All parameters of the neuron can be changed in the [configs.py](https://github.com/Rwik2000/LIF-SNN/blob/master/configs.py). Note that the units of time is **milliseconds**.
 
-![alt text](https://github.com/Rwik2000/LIF-SNN/blob/master/images/equarion.png)
+![alt text](https://github.com/Rwik2000/LIF-SNN/blob/master/images/equation.png)
 ## Usage:
 From [neuron.py](https://github.com/Rwik2000/LIF-SNN/blob/master/neuron.py), call the function `runLIF()`. 
 ```python
