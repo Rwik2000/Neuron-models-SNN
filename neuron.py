@@ -2,7 +2,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 from configs import LIFneuronConfig, IzhikevichConfig
 import math
-import time
 
 class LIF():
     def __init__(self):
@@ -35,7 +34,7 @@ class LIF():
 
 class Izhikevich():
         def __init__(self,):
-            izhikevichConfig.__init__(self,)
+            IzhikevichConfig.__init__(self,)
             # #parameters that define the neuron model
             self.uv = []
 
@@ -67,53 +66,17 @@ class Izhikevich():
             # print(v)
             return v
 
-def runNeuronSimple(model, t_span, dt, I):
+def runNeuron(model, t_span, dt, I):
     v = np.zeros_like(t_span)
 
     for i, t in enumerate(t_span):
-        if i==0:
-            v_prev = 0
-        else:
-            v_prev= v[i-1]
         v[i] = model.generateSpiking(I[i], t, dt)
 
     
     if model.isPlot:
         plt.plot(t_span,v, label = 'V')
         plt.plot(t_span,I, label = 'I')
-        # plt.plot(t_span,Z, label = 'Z')
-
-        plt.title('Leaky Integrate-and-Fire')
-        plt.ylabel('Membrane Potential (V) and input current(I)')
-        plt.xlabel('Time (msec)')
-        plt.grid()
-        plt.legend(loc="upper right")
-        plt.show()
-    return v
-
-def runNeuronCustom(model, t_span, I,z ,ifSec = False):
-    v = np.zeros_like(t_span)
-
-    if ifSec:
-        t_span = t_span*1000
-
-    for i, t in enumerate(t_span):
-        if i==0:
-            v[i] = 0
-            dt = t - 0
-        else:
-            dt = t - t_span[i-1]
-            st = time.time()
-            v[i] = model.generateSpiking(I[i], t, dt)
-            print(time.time() - st)
-
-    
-    if model.isPlot:
-        plt.plot(t_span,v, label = 'V')
-        plt.plot(t_span,I, label = 'I')
-        plt.plot(t_span,z, label = 'Z')
-
-        plt.title('Leaky Integrate-and-Fire')
+        plt.title('Neuron Model')
         plt.ylabel('Membrane Potential (V) and input current(I)')
         plt.xlabel('Time (msec)')
         plt.grid()
@@ -126,6 +89,6 @@ if __name__=='__main__':
     dt = 0.01
     t_span = np.arange(0, t_tot+dt, dt)
     I = [1 if 200/dt <= i <= 600/dt  else 10 for i in range(len(t_span))]
-    neuron = izhikevich()
-    v = runNeuronSimple(neuron, t_span, dt, I)
+    neuron = Izhikevich()
+    v = runNeuron(neuron, t_span, dt, I)
     
