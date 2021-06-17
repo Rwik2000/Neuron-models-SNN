@@ -59,6 +59,6 @@ v = runNeuronSimple(neuron, t_span, dt, I)
 * https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=1257420
 
 ## To-Do:
-- [*] Add random salt-pepper noise to the output voltage.
+- [x] Add random salt-pepper noise to the output voltage.
 
 
