@@ -48,7 +48,10 @@ v = runNeuronSimple(neuron, t_span, dt, I)
 **NOTE**: To plot the voltage and current data, turn ON the `isPLot` argument in the [configs.py](https://github.com/Rwik2000/LIF-SNN/blob/master/configs.py)
 
 ## Test Case:
-![alt text](https://github.com/Rwik2000/LIF-SNN/blob/master/images/testCase_1.png)
+* LIF \\
+![alt text](https://github.com/Rwik2000/LIF-SNN/blob/master/images/LIF.png)
+* Izhikevich \\
+![alt text](https://github.com/Rwik2000/LIF-SNN/blob/master/images/Izhikevich.png)
 
 ## Some links:
 * [MIT open courseware](https://ocw.mit.edu/resources/res-9-003-brains-minds-and-machines-summer-course-summer-2015/tutorials/tutorial-2.-matlab-programming/MITRES_9_003SUM15_fire.pdf)
