@@ -17,7 +17,7 @@ class LIFneuronConfig():
 
         self.isPlot = 1
 
-class izhikevichConfig():
+class IzhikevichConfig():
     def __init__(self,):
             self.A = 0.04
             self.B = 5

@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from .configs import LIFneuronConfig, izhikevichConfig
+from configs import LIFneuronConfig, IzhikevichConfig
 import math
 import time
 
@@ -33,7 +33,7 @@ class LIF():
         self.vprev = v 
         return v
 
-class izhikevich():
+class Izhikevich():
         def __init__(self,):
             izhikevichConfig.__init__(self,)
             # #parameters that define the neuron model
